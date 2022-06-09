@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "sgpostgres",
+    "password": "qPl39ZeblHk-Oi6n",
+    "database": "postgres",
+    "host": "SG-butter-clock-3119-3461-pgsql-master.servers.mongodirector.com",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "sgpostgres",
+    "password": "qPl39ZeblHk-Oi6n",
+    "database": "postgres",
+    "host": "SG-butter-clock-3119-3461-pgsql-master.servers.mongodirector.com",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "sgpostgres",
+    "password": "qPl39ZeblHk-Oi6n",
+    "database": "postgres",
+    "host": "SG-butter-clock-3119-3461-pgsql-master.servers.mongodirector.com",
+    "dialect": "postgres"
+  }
+}
