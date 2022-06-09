@@ -8,6 +8,7 @@ const router = express.Router();
 router.route('/signup').post(authController.signup)
 router.route('/login').post(authController.login)
 router.use(authController.protect);
+
 router.route('/admin')
     .get(userController.getAllUsers)
     //.post(userController.createUser)
@@ -18,6 +19,9 @@ router.route('/me')
     .get(userController.getMe, userController.getUser)
     .delete(userController.deleteMe, userController.deleteUser)
     .patch(userController.updateMe);
+
+router.route('/pdf')
+    .patch(userController.uploadUserPhoto, userController.createPDF);
 
 module.exports = router;
 
