@@ -35,8 +35,6 @@ const filterObj = (obj, ...allowerdFields) => {
 exports.uploadUserPhoto = upload.single('photo');
 
 exports.createPDF = catchAsync(async (req, res, next) => {
-    if (req.file) console.log("got pdf in memory");
-    console.log(req.user)
     let theOutput = new PDFGenerator 
 
     // pipe to a writable stream which would save the result into the same directory
@@ -68,8 +66,7 @@ exports.updateMe = catchAsync(async (req, res, next) => {
     };
     // 2. Filtered out unwanted fields names that are not allowd to be updated
     const filteredBody = filterObj(req.body, 'firstName','lastName', 'email');
-    //if (req.file) console.log(filteredBody.pdf = req.file);
-    console.log("______end");
+
     // 2. Update user document
     const {id} = req.user;
     const doc = await UserNew.findByPk(id);
